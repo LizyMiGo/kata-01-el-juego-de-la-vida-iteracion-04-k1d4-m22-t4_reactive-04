@@ -76,33 +76,23 @@ async function main () {
     if (char === 'n') rl.close()
   }
 }
-
 function nextGeneration (matrix) {
   const aux = new Array(matrix.getAltura()).fill(new Array(matrix.getAnchura()).fill('')).map(fila => fila.map(_ => 0))
-
   for (let x = 1; x < matrix.getMatrix().length - 1; x++) {
     for (let y = 1; y < matrix.getMatrix()[x].length - 1; y++) {
       let VecinosVivos = 0
       if (matrix.getMatrix()[x - 1][y - 1] === 1) VecinosVivos++
       if (matrix.getMatrix()[x][y - 1] === 1) VecinosVivos++
       if (matrix.getMatrix()[x + 1][y - 1] === 1) VecinosVivos++
-
       if (matrix.getMatrix()[x - 1][y] === 1) VecinosVivos++
       if (matrix.getMatrix()[x + 1][y] === 1) VecinosVivos++
-
       if (matrix.getMatrix()[x - 1][y + 1] === 1) VecinosVivos++
       if (matrix.getMatrix()[x][y + 1] === 1) VecinosVivos++
       if (matrix.getMatrix()[x + 1][y + 1] === 1) VecinosVivos++
-
       if (matrix.getMatrix()[x][y] === 0) {
-        if (VecinosVivos === 3) aux[x][y] = 1
-      } else {
+        if (VecinosVivos === 3) aux[x][y] = 1}else {
         if (VecinosVivos === 2 || VecinosVivos === 3) {
-          aux[x][y] = 1
-        }
-      }
-    }
-  }
+          aux[x][y] = 1}}}}
   return aux
 }
 
