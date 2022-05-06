@@ -1,3 +1,6 @@
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/5cd4be22433d08455567/maintainability)](https://codeclimate.com/github/BC-MAY-21-RN/kata-01-el-juego-de-la-vida-iteracion-04-k1d4-m22-t4-reactive-04/maintainability)
+
 ![BrightCoders Logo](img/logo-bc.png)
 
 # Kata El Juego de la Vida
@@ -26,6 +29,7 @@ You start with a two dimensional grid of cells, where each cell is either alive 
 4. Any dead cell with exactly three live neighbours becomes a live cell.
 
 You should write a program that can accept an arbitrary grid of cells, and will output a similar grid showing the next generation.
+
 
 ### Clues
 The input starting position could be a text file that looks like this:
